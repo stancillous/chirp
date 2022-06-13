@@ -1,0 +1,644 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #201919;
+  overflow-x: hidden;
+}
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+.animations {
+  opacity: 0;
+  -webkit-clip-path: circle(3.2% at 0 35%);
+          clip-path: circle(3.2% at 0 35%);
+  -webkit-clip-path: circle(2.9% at 0 0);
+          clip-path: circle(2.9% at 0 0);
+}
+
+.header {
+  width: 100vw;
+  height: 15vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.header .logo {
+  width: 30%;
+}
+
+.header .logo h1 {
+  text-align: center;
+  font-family: montserrat;
+  font-size: 2rem;
+  color: white;
+  font-style: italic;
+  text-transform: capitalize;
+}
+
+.header .navbar {
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.header .navbar .links ul li {
+  list-style: none;
+  display: inline-block;
+  position: relative;
+}
+
+.header .navbar .links ul li .black {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  -webkit-clip-path: inset(0% 100% 0% 0%);
+          clip-path: inset(0% 100% 0% 0%);
+  -webkit-clip-path: circle(17.9% at 50% 50%);
+          clip-path: circle(17.9% at 50% 50%);
+  -webkit-clip-path: circle(1.5% at 0 51%);
+          clip-path: circle(1.5% at 0 51%);
+  z-index: -1;
+}
+
+.header .navbar .links ul li a {
+  font-family: pally;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  font-size: 1.8rem;
+  opacity: .9;
+  padding: 0 .5rem;
+}
+
+.header .navbar .cta-button .cta {
+  cursor: pointer;
+  background-color: #0A5DFF;
+  font-family: pally;
+  text-transform: uppercase;
+  color: white;
+  padding: .8rem 1.3rem;
+  border: none;
+  border-radius: .5rem;
+  font-size: 1.4rem;
+}
+
+.header .navbar .cta-button .cta i {
+  color: white;
+  padding-right: .6rem;
+  font-size: 1.8rem;
+}
+
+.header .hamburger {
+  padding: 1rem;
+  position: absolute;
+  top: 3rem;
+  right: 3rem;
+  display: none;
+  z-index: 123;
+}
+
+.header .hamburger span {
+  background-color: white;
+  width: 4rem;
+  height: .4rem;
+  padding: .3rem;
+  border-radius: .5rem;
+  display: block;
+  margin: .3rem 0;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.header .hamburger .span-two {
+  -webkit-transform: translateX(1rem);
+          transform: translateX(1rem);
+  width: 2rem;
+}
+
+.hero-section {
+  border-bottom: .1rem solid grey;
+  margin-top: 1rem;
+  height: 85vh,auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.hero-section .hero-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 90%;
+}
+
+.hero-section .hero-container .text {
+  padding: 2rem;
+  width: 60%;
+}
+
+.hero-section .hero-container .text h1 {
+  font-family: montserrat;
+  color: white;
+  font-size: 3.5rem;
+  padding: 1rem 0;
+}
+
+.hero-section .hero-container .text p {
+  font-family: pally;
+  color: white;
+  font-size: 1.6rem;
+  padding: 2rem 0;
+}
+
+.hero-section .hero-container .text p .memberNumber {
+  color: #0A5DFF;
+}
+
+.hero-section .hero-container .text .cta {
+  cursor: pointer;
+  margin: 1rem 0;
+  background-color: #0A5DFF;
+  font-family: pally;
+  text-transform: uppercase;
+  color: white;
+  padding: .8rem 1.3rem;
+  border: none;
+  border-radius: .5rem;
+  font-size: 1.4rem;
+}
+
+.hero-section .hero-container .text .cta i {
+  color: white;
+  padding-right: .6rem;
+  font-size: 1.8rem;
+}
+
+.hero-section .hero-container .desktopImageContainer {
+  height: 100%;
+}
+
+.hero-section .hero-container .desktopImageContainer .desktopImg {
+  height: 50rem;
+  width: 40rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.hero-section .hero-container .tabletImageContainer {
+  display: none;
+}
+
+.hero-section .hero-container .tabletImageContainer .tabletImg {
+  width: 70rem;
+  height: 40rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.features-container {
+  padding: 4rem 0;
+  border-bottom: .1rem solid grey;
+}
+
+.features-container h1 {
+  font-family: montserrat;
+  font-size: 2.2rem;
+  padding: 2rem 0;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  opacity: .9;
+  padding: 1rem;
+}
+
+.features-container .features-displayFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.features-container .features-displayFlex .features-parent {
+  width: 60%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+.features-container .features-displayFlex .features-parent .feature {
+  margin: .4rem;
+  padding: 3rem;
+  background-color: #3C7BF4;
+  border-radius: .4rem;
+}
+
+.features-container .features-displayFlex .features-parent .feature h2 {
+  padding: 1rem 0;
+  font-family: montserrat;
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.9rem;
+}
+
+.features-container .features-displayFlex .features-parent .feature p {
+  font-family: pally;
+  color: white;
+  font-size: 1.6rem;
+  padding: 1rem 0;
+}
+
+.reviews-container {
+  border-bottom: .1rem solid grey;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 4rem;
+  padding-bottom: 5rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.reviews-container .reviews-parent {
+  width: 50%;
+}
+
+.reviews-container .reviews-parent h1 {
+  font-family: montserrat;
+  color: white;
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  padding: 3rem;
+  text-align: center;
+  opacity: .9;
+}
+
+.reviews-container .reviews-parent .reviews {
+  background-color: white;
+  border-radius: .5rem;
+  padding: 2rem;
+  position: relative;
+}
+
+.reviews-container .reviews-parent .reviews .review-name {
+  font-family: sf cartoonist hand;
+  font-weight: bold;
+  font-size: 1.4rem;
+  font-size: 1.5rem;
+  padding: .5rem 1rem;
+}
+
+.reviews-container .reviews-parent .reviews .review-text {
+  font-family: pally;
+  font-size: 1.7rem;
+  padding: 1rem;
+}
+
+.reviews-container .reviews-parent .reviews #leftBtn {
+  position: absolute;
+  top: 40%;
+  left: -6%;
+  color: white;
+  font-size: 3rem;
+  background-color: white;
+  border-radius: .6rem;
+  color: black;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.reviews-container .reviews-parent .reviews #rightBtn {
+  position: absolute;
+  top: 40%;
+  right: -6%;
+  color: white;
+  background-color: white;
+  border-radius: .6rem;
+  color: black;
+  padding: 1rem;
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+.footer {
+  padding: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.footer div {
+  padding: 2rem;
+  margin: 1rem;
+}
+
+.footer .footer-logo h1 {
+  font-family: montserrat;
+  font-size: 2rem;
+  color: #0A5DFF;
+  font-style: italic;
+  text-transform: capitalize;
+}
+
+.footer .quick-links a {
+  font-family: pally;
+  font-size: 1.6rem;
+  color: white;
+  opacity: .8;
+  text-decoration: none;
+}
+
+.footer .download-app p {
+  font-family: pally;
+  opacity: .8;
+  font-size: 1.6rem;
+  color: white;
+}
+
+.footer .download-app button {
+  background-color: white;
+  padding: 1rem 1.4rem;
+  border: none;
+  border-radius: .4rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.footer .download-app button p {
+  font-family: pally;
+  font-weight: bold;
+  font-size: 1.6rem;
+  color: black;
+}
+
+.footer .download-app button p i {
+  font-size: 2rem;
+  padding-right: 1rem;
+}
+
+.hamburger.clicked span:nth-child(1) {
+  -webkit-transform: translateY(0.8rem) rotate(45deg);
+          transform: translateY(0.8rem) rotate(45deg);
+}
+
+.hamburger.clicked span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.clicked span:nth-child(3) {
+  -webkit-transform: translateY(-1rem) rotate(-45deg);
+          transform: translateY(-1rem) rotate(-45deg);
+}
+
+body.overflowHidden {
+  overflow: hidden;
+}
+
+.header .navbar .links ul li.changeLinkColor a {
+  color: black;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+@media screen and (max-width: 930px) {
+  .header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .header .logo {
+    z-index: 123;
+  }
+  .header .hamburger {
+    display: block;
+  }
+  .header .navbar {
+    background-color: black;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    -webkit-clip-path: inset(0 0 0 100%);
+            clip-path: inset(0 0 0 100%);
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+    -webkit-clip-path: circle(1.3% at 100% 49%);
+            clip-path: circle(1.3% at 100% 49%);
+    z-index: 100;
+  }
+  .header .navbar .cta-button {
+    display: none;
+  }
+  .header .navbar .links {
+    height: 100vh;
+  }
+  .header .navbar .links ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .header .navbar .links ul li {
+    width: 50%;
+    text-align: center;
+  }
+  .header .navbar .links ul li a {
+    text-transform: uppercase;
+    font-size: 2.5rem;
+  }
+  .hero-section {
+    padding: unset;
+  }
+  .hero-section .hero-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 80%;
+  }
+  .hero-section .hero-container .text {
+    width: 100%;
+  }
+  .hero-section .hero-container .desktopImageContainer {
+    display: none;
+  }
+  .hero-section .hero-container .tabletImageContainer {
+    display: block;
+  }
+  .features-container .features-displayFlex .features-parent {
+    width: 70%;
+  }
+  .navbar.active {
+    -webkit-clip-path: inset(0 0 0 0);
+            clip-path: inset(0 0 0 0);
+    -webkit-clip-path: circle(70.7% at 50% 50%);
+            clip-path: circle(70.7% at 50% 50%);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .hero-section .hero-container .tabletImageContainer .tabletImg {
+    width: 60rem;
+  }
+  .features-container .features-displayFlex .features-parent {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .hero-section .hero-container {
+    width: 90%;
+  }
+  .hero-section .hero-container .tabletImageContainer .tabletImg {
+    width: 55rem;
+  }
+  .features-container .features-displayFlex .features-parent {
+    width: 85%;
+  }
+  .reviews-container .reviews-parent {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .hero-section {
+    padding: unset;
+  }
+  .hero-section .hero-container .desktopImageContainer {
+    display: block;
+    padding: 2rem;
+  }
+  .hero-section .hero-container .tabletImageContainer {
+    display: none;
+  }
+  .features-container .features-displayFlex .features-parent {
+    width: 95%;
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .hero-section .hero-container .text h1 {
+    font-size: 3.1rem;
+  }
+  .hero-section .hero-container .desktopImageContainer {
+    display: block;
+    padding: 2rem;
+  }
+  .hero-section .hero-container .tabletImageContainer {
+    display: none;
+  }
+  .features-container .features-displayFlex .features-parent {
+    width: 80%;
+    padding: 1rem;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-section .hero-container .text h1 {
+    font-size: 2.8rem;
+  }
+  .hero-section .hero-container .desktopImageContainer {
+    display: block;
+    padding: 2rem;
+  }
+  .hero-section .hero-container .desktopImageContainer .desktopImg {
+    width: 35rem;
+  }
+  .reviews-container .reviews-parent {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .hero-section .hero-container {
+    width: 100%;
+  }
+  .reviews-container .reviews-parent {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .hero-section .hero-container .desktopImageContainer .desktopImg {
+    width: 30rem;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .hero-section .hero-container .text h1 {
+    font-size: 2.5rem;
+  }
+  .hero-section .hero-container .desktopImageContainer .desktopImg {
+    width: 25rem;
+  }
+  .features-container h1 {
+    font-size: 2rem;
+  }
+  .reviews-container .reviews-parent h1 {
+    font-size: 2rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */

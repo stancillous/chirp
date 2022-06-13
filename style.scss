@@ -1,0 +1,876 @@
+
+$backgroundColor:#201919;
+$h-font:montserrat;
+$p-font:poppins;
+$a-font:pally;
+
+$sf-font:sf cartoonist hand;
+$web-color:#0A5DFF;
+$web-color2:#3C7BF4;
+
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: $backgroundColor;
+    overflow-x: hidden;
+}
+html{
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+
+
+
+//this div contains everything and is initially hidden by giving it an opacity of 0
+// we'll reveal it once the page loads completely
+.animations{
+    opacity: 0;
+    clip-path: circle(3.2% at 0 35%);
+    clip-path: circle(2.9% at 0 0);
+
+    // visibility: hidden;
+}
+//header
+.header{
+    width: 100vw;
+    height: 15vh;
+    // border: 3px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    .logo{
+        width: 30%;
+        h1{
+            text-align: center;
+            font-family: $h-font;
+            font-size: 2rem;
+            color: white;
+            font-style: italic;
+            text-transform: capitalize;
+
+        }
+    }
+
+    //navbar with link and button
+    .navbar{
+        width: 70%;
+        // border: 3px solid red;
+        display: flex;
+        justify-content: space-evenly;
+
+            //menu links
+    .links{
+
+        ul li{
+            list-style: none;
+            display: inline-block;
+            position: relative;
+
+            //the divs inside the list that will animate on hover
+            .black{
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: rgb(255, 255, 255);
+
+                height: 100%;
+                width: 100%;
+                clip-path: inset(0% 100% 0% 0%);
+                clip-path: circle(17.9% at 50% 50%);
+
+                //
+                clip-path: circle(1.5% at 0 51%);
+
+
+                z-index: -1;
+                // z-index: 1;
+
+
+            }
+
+            a{
+                font-family: $a-font;
+                font-weight: bold;
+                color: white;
+                text-decoration: none;
+                font-size: 1.8rem;
+                opacity: .9;
+                padding: 0 .5rem;
+            }
+        }
+    }
+
+    //cta button
+    .cta-button{
+        .cta{
+            cursor: pointer;
+            background-color: $web-color;
+            font-family: $a-font;
+            text-transform: uppercase;
+            color: white;
+            padding: .8rem 1.3rem;
+            border: none;
+            border-radius: .5rem;
+            font-size: 1.4rem;
+            i{
+                color: white;
+                padding-right: .6rem;
+                font-size: 1.8rem;
+            }
+
+        }
+    }
+    }
+
+
+    //placing the hamburger button
+    .hamburger{
+        // background-color: red;
+        padding: 1rem;
+        position: absolute;
+        top: 3rem;
+        right: 3rem;
+        display: none;
+        z-index: 123;  //giving it a z index greater than that of the navbar so that it will stil be visible even when the links show
+
+
+        span{
+            background-color: white;
+            width: 4rem;
+            height: .4rem;
+            padding: .3rem;
+            border-radius: .5rem;
+            display: block;
+            margin: .3rem 0;
+            transition: all .4s ease-in-out;
+
+        }
+        .span-two{
+            // background-color: green;
+            transform: translateX(1rem);
+            width: 2rem;
+        }
+    }
+
+
+}
+
+//hero section
+.hero-section{
+    border-bottom: .1rem solid grey;
+    margin-top: 1rem;
+    // border: 2px solid rgb(255, 255, 255);
+    height: 85vh,auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    // display: grid;
+    // grid-template-columns: 1fr 1fr;
+
+    .hero-container{
+        // border: 2px solid  rgb(103, 32, 218);
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        .text{
+            padding: 2rem;
+            width: 60%;
+            // border: 3px solid rgb(103, 32, 218);
+            h1{
+                font-family: $h-font;
+                color: white;
+                font-size: 3.5rem;
+                padding: 1rem 0;
+            }
+            p{
+                font-family: $a-font;
+                color: white;
+                font-size: 1.6rem;
+                padding: 2rem 0;
+
+                .memberNumber{
+                    color: $web-color;
+                }
+            }
+            .cta{
+                cursor: pointer;
+                margin:  1rem 0;
+                background-color: $web-color;
+                font-family: $a-font;
+                text-transform: uppercase;
+                color: white;
+                padding: .8rem 1.3rem;
+                border: none;
+                border-radius: .5rem;
+                font-size: 1.4rem;
+                i{
+                    color: white;
+                    padding-right: .6rem;
+                    font-size: 1.8rem;
+                }
+    
+            }
+        }
+    
+        //desktop image
+        .desktopImageContainer{
+            // border: 5px solid red;
+            height: 100%;
+            .desktopImg{
+                // height: 100%;
+                // width: 100%;
+                height: 50rem;
+                width: 40rem;
+                object-fit: cover;
+            }
+
+        }
+
+        //tablet image
+        .tabletImageContainer{
+            display: none;
+
+            .tabletImg{
+                width: 70rem;
+                height: 40rem;
+                object-fit: cover;
+            }
+        }
+
+    }
+    
+
+}
+
+
+//features
+
+.features-container{
+    padding: 4rem 0;
+    // border: 4px solid red;
+    border-bottom: .1rem solid grey;
+
+    
+    h1{
+        font-family: $h-font;
+        font-size: 2.2rem;
+        padding: 2rem 0;
+        color: white;
+        text-align: center;
+        text-transform: uppercase;
+        opacity: .9;
+        padding: 1rem;
+        // border: 3px solid red;
+    }
+    .features-displayFlex{
+        // border: 3px solid blue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .features-parent{
+            // border: 3px solid green;
+            width: 60%;
+
+            // border: 3px solid red;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+    
+            .feature{
+                margin: .4rem;
+                padding: 3rem;
+                background-color: $web-color2;
+                border-radius: .4rem;
+                // border: 3px solid rgb(176, 41, 41);
+    
+                h2{
+                    padding: 1rem 0;
+                    font-family: $h-font;
+                    color: white;
+                    text-transform: uppercase;
+                    font-size: 1.9rem;
+    
+                }
+                p{
+                    font-family: $a-font;
+                    color: white;
+                    font-size: 1.6rem;
+                    padding: 1rem 0;
+    
+                }
+            }
+    
+        }
+    }
+
+
+}
+
+//review
+
+.reviews-container{
+    border-bottom: .1rem solid grey;
+    display: flex;
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+    justify-content: center;
+    align-items: center;
+
+    .reviews-parent{
+        width: 50%;
+        // border: 3px solid red;
+
+        h1{
+            font-family: $h-font;
+            color: white;
+            font-size: 2.2rem;
+            text-transform: uppercase;
+            padding: 3rem;
+            text-align: center;
+            opacity: .9;
+        }
+
+        .reviews{
+            background-color: white;
+            border-radius: .5rem;
+            padding: 2rem;
+            position: relative;
+
+
+
+
+            .review-name{
+                font-family: $sf-font;
+                font-weight: bold;
+                font-size: 1.4rem;
+                font-size: 1.5rem;
+                padding: .5rem 1rem;
+            }
+            .review-text{
+                font-family: $a-font;
+                font-size: 1.7rem;
+                padding: 1rem;
+            }
+
+            #leftBtn{
+                position: absolute;
+                top: 40%;
+                left: -6%;
+                color: white;
+                font-size: 3rem;
+                background-color: white;
+                border-radius: .6rem;
+                color: black;
+                padding: 1rem;
+                cursor: pointer;
+                // left: -30%;
+            }
+
+            #rightBtn{
+                position: absolute;
+                top: 40%;
+                right: -6%;
+                color: white;
+                background-color: white;
+                border-radius: .6rem;
+                color: black;
+                padding: 1rem;
+                font-size: 3rem;
+                // left: -30%;
+                cursor: pointer;
+            }
+
+
+        }
+
+ 
+    }
+}
+
+//footer
+
+.footer{
+    padding: 4rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    // align-items: center;
+
+    div{
+        padding: 2rem;
+        margin: 1rem;
+    }
+    .footer-logo{
+        h1{
+            font-family: $h-font;
+            font-size: 2rem;
+            color: $web-color;
+            font-style: italic;
+            text-transform: capitalize;
+        }
+    }
+    
+    .quick-links{
+        a{
+            font-family: $a-font;
+            font-size: 1.6rem;
+            color: white;
+            opacity: .8;
+            text-decoration: none;
+        }
+    }
+
+    .download-app{
+        p{
+            font-family: $a-font;
+            opacity: .8;
+            font-size: 1.6rem;
+            color: white;
+
+        }
+
+        button{
+            background-color: white;
+            padding: 1rem 1.4rem;
+            border: none;
+            border-radius: .4rem;
+            cursor: pointer;
+            margin-top: 1rem;
+
+            p{
+                font-family: $a-font;
+                font-weight: bold;
+                font-size: 1.6rem;
+                color: black;
+                // padding: 0 1.4rem;
+
+                i{
+                    font-size: 2rem;
+                    padding-right: 1rem;
+            }
+            }
+        }
+    }
+}
+
+
+//animating the hamburger spans when the button is clicked
+//give the hamburger this class when it is clicked 
+.hamburger.clicked{
+    
+    span{
+        &:nth-child(1){
+            transform: translateY(.8rem) rotate(45deg);
+        }
+        &:nth-child(2){
+            opacity: 0;
+            
+        }
+        &:nth-child(3){
+            transform: translateY(-1rem) rotate(-45deg);
+
+        }
+    }
+}
+
+
+//adding a class that will  disable scrolling when the links are shown
+
+body.overflowHidden{
+    overflow: hidden;
+}
+
+
+//when the list item is hovered, change the color of the <a> tag
+
+.header .navbar .links ul li.changeLinkColor a {
+    color: black;
+    transform: scale(1.1);
+
+}
+
+
+//MEDIA QUERIES
+
+
+//media query for screens less than 900px
+//HIDING THE DESKTOP IMAGE HERE AND SHOWING THE TABLET IMAGE
+@media screen and(max-width:930px) {
+    .header{
+        flex-direction: column;
+        align-items: flex-start;
+        // height: 100vh;
+        
+        .logo{
+            z-index: 123;  //giving it a z index greater than that of the navbar so that it will stil be visible even when the links show
+        }
+
+        .hamburger{
+            display: block;
+        }
+
+        .navbar{
+            background-color:black;
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            width: 100vw;
+            clip-path: inset(0 0 0 100%);  //hiding the navbar on small screens
+            transition: all .4s ease;
+            clip-path: circle(1.3% at 100% 49%);
+            z-index: 100;
+
+            .cta-button{
+                display: none;
+            }
+
+            .links{
+                height: 100vh;
+                // border: 4px solid orange;
+                ul{
+                    display: flex;
+                    flex-direction: column;
+                    // border: 3px sold rgb(26, 255, 0);
+                    width: 100vw;
+                    height: 100vh;
+                    justify-content: space-evenly;
+                    align-items: center;
+
+                    li{
+                        width: 50%;
+                        text-align: center;
+                        // border: 3px solid red;
+                        
+                        a{
+                            text-transform: uppercase;
+                            font-size: 2.5rem;
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //hero section
+    .hero-section{
+        padding: unset;  //removing the padding from the hero section
+
+        .hero-container{
+            flex-direction: column;
+            width: 80%;
+
+            .text{
+                width: 100%;
+            }
+
+            //hiding the desktop image 
+            .desktopImageContainer{
+                display: none;
+            }
+
+            //showing the tablet image 
+            .tabletImageContainer{
+                display: block;
+            }
+
+        }
+    }
+
+    //features sectiion
+    .features-container{
+        .features-displayFlex{
+            .features-parent{
+                width: 70%;
+
+                
+            }
+        }
+    }
+
+
+
+    //give the navbar this class when the hamburger is clicked so as to show the hidden links
+    .navbar.active{
+        clip-path: inset(0 0 0 0);
+        clip-path: circle(70.7% at 50% 50%);
+
+    }
+
+}
+
+@media screen and(max-width:800px) {
+
+    //hero section
+    .hero-section{
+        // padding: unset;  //removing the padding from the hero section
+
+        .hero-container{
+
+            .tabletImageContainer{
+                .tabletImg{
+                    width: 60rem;
+                }
+            }
+        }
+    }
+
+    //features sectiion
+    .features-container{
+        .features-displayFlex{
+            .features-parent{
+                width: 80%;
+                
+            }
+        }
+    }
+    
+}
+
+@media screen and(max-width:650px) {
+
+    //hero section
+    .hero-section{
+        .hero-container{
+            width: 90%;
+
+            .tabletImageContainer{
+                .tabletImg{
+                    width: 55rem;
+                }
+            }
+        }
+    }
+
+    //features sectiion
+    .features-container{
+        .features-displayFlex{
+            .features-parent{
+                width: 85%;
+                // background-color: red;
+
+            }
+        }
+    }
+
+    //reviews section
+    .reviews-container{
+        .reviews-parent{
+            width: 60%;
+        }
+    }
+    
+}
+
+//HIDING THE TABLET IMAGE HERE AND SHOWING THE DESKTOP IMAGE
+@media screen and(max-width:580px) {
+
+    //hero section
+    .hero-section{
+        padding: unset;  //removing the padding from the hero section
+        .hero-container{
+
+            .desktopImageContainer{
+                display: block;
+                padding: 2rem;
+            }
+
+            .tabletImageContainer{
+                display: none;
+
+            }
+        }
+    }
+
+    //features sectiion
+    .features-container{
+        .features-displayFlex{
+            .features-parent{
+                width: 95%;
+                padding: 1rem;
+                // background-color: red;
+                
+            }
+        }
+    }
+    
+}
+@media screen and(max-width:550px) {
+
+    //hero section
+    .hero-section{
+        .hero-container{
+
+            .text{
+                h1{
+                    font-size: 3.1rem;
+                }
+            }
+
+            .desktopImageContainer{
+                display: block;
+                padding: 2rem;
+            }
+
+            .tabletImageContainer{
+                display: none;
+
+            }
+        }
+    }
+
+    //features sectiion
+    .features-container{
+        .features-displayFlex{
+            .features-parent{
+                width: 80%;
+                padding: 1rem;
+                grid-template-columns: 1fr;
+                
+            }
+        }
+    }
+    
+}
+
+@media screen and(max-width:480px) {
+
+
+    //hero section
+    .hero-section{
+        .hero-container{
+
+            .text{
+                h1{  //reducing text size
+                    font-size: 2.8rem;
+                }
+            }
+
+            .desktopImageContainer{
+                display: block;
+                padding: 2rem;
+                .desktopImg{
+                    width: 35rem;
+                }
+            }
+
+
+        }
+    }
+
+    .reviews-container{
+        .reviews-parent{
+            width: 70%;
+        }
+    }
+
+
+    
+}
+
+@media screen and(max-width:440px) {
+
+    .hero-section .hero-container{
+        width: 100%;
+
+    }
+
+
+
+
+
+    //reviews section
+    .reviews-container{
+        .reviews-parent{
+            width: 80%;
+        }
+    }
+
+    //footer
+    .footer{
+        // align-items: center;
+        // flex-direction: column;
+    }
+
+
+    
+}
+
+@media screen and(max-width:380px) {
+
+     //hero section
+     .hero-section{
+        .hero-container{
+
+
+            .desktopImageContainer{
+                .desktopImg{
+                    width: 30rem;
+                }
+            }
+        }
+    }
+
+    
+}
+@media screen and(max-width:340px) {
+
+     //hero section
+     .hero-section{
+        .hero-container{
+
+            .text{
+                h1{
+                    font-size: 2.5rem;
+                }
+            }
+
+            .desktopImageContainer{
+                .desktopImg{
+                    width: 25rem;
+                }
+            }
+        }
+    }
+
+    //features
+    .features-container{
+        h1{
+            font-size: 2rem;
+        }
+    }
+
+    //review section
+    .reviews-container{
+        .reviews-parent{
+            h1{
+                font-size: 2rem;
+            }
+        }
+    }
+
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
